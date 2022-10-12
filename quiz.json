@@ -1,0 +1,112 @@
+[
+        {
+		"question": "Q: You’re hosting a sleepover with Meepo, and you decided to watch anime! What will you guys choose?",
+		"choices": ["Chainsaw Man", "Great Pretender", "Komi-san Can’t Communicate", "Haikyuu!!"],
+    "answers": ["1","2","3","4"],
+    "weights": {
+      "1": "Ronin",
+      "2": "Droid",
+      "3": "Human",
+      "4": "Human"}
+	},
+      {
+		"question": "Q: Look! A Meepo Candy & Sweets Shop has arrived in the city! You and Prixie will check it out, what do you think she’s gonna order?",
+		"choices": ["Mochi", "Donuts", "Daifuku", "Sanshoku Dango"],
+    "answers": ["1","2","3","4"],
+    "weights": {
+      "1": "Ronin",
+      "2": "Droid",
+      "3": "Human",
+      "4": "Human"}
+	},
+    {
+		"question": "Q: You’re having some art classes in Aiko University, who’s your favorite teacher?",
+		"choices": ["Garrid as Art Teacher", "Meepo as Math Teacher", "Kyo as Fashion Teacher", "Matarelli as Geography Teacher"],
+    "answers": ["1","2","3","4"],
+    "weights": {
+      "1": "Ronin",
+      "2": "Droid",
+      "3": "Human",
+      "4": "Human"}
+	},
+  {
+		"question": "Q: You’re having a date with Prixie but suddenly it starts raining! What would you do?",
+		"choices": ["Use your jacket and protect her", "Spend 150 Meepo Coins to buy a nice umbrella in a nearby shop", "You put Prixie on your shoulders and run away to a place with no rain", "Steal a nearby car to seek shelter from rain"],
+    "answers": ["1","2","3","4"],
+    "weights": {
+      "1": "Ronin",
+      "2": "Droid",
+      "3": "Human",
+      "4": "Human"}
+	},
+  {
+		"question": "Q: What do you think Meepo does in his free time?",
+		"choices": ["Clothes Shopping", "Nature Watching", "Watches Movies", "Plays Video Games"],
+    "answers": ["1","2","3","4"],
+    "weights": {
+      "1": "Ronin",
+      "2": "Droid",
+      "3": "Human",
+      "4": "Human"}
+	},
+  {
+		"question": "Q: What do you think is Meepo's favorite food?",
+		"choices": ["Lasagna", "Noodles", "Subway", "Pizza"],
+    "answers": ["1","2","3","4"],
+    "weights": {
+      "1": "Ronin",
+      "2": "Droid",
+      "3": "Human",
+      "4": "Human"}
+	},
+  {
+		"question": "Q: What do you think is Meepo's favorite sock color?",
+		"choices": ["Red", "Brown", "Orange", "Pink"],
+    "answers": ["1","2","3","4"],
+    "weights": {
+      "1": "Ronin",
+      "2": "Droid",
+      "3": "Human",
+      "4": "Human"}
+	},
+	{
+		"question": "Q: If Meepo was hanging from a cliff what would you do?",
+		"choices": ["Save Meepo", "Watch Meepo Fall", "Call for Help", "Meepo is fine"],
+    "answers": ["1","2","3","4"],
+    "weights": {
+      "1": "Ronin",
+      "2": "Droid",
+      "3": "Human",
+      "4": "Human"}
+	},
+	{
+		"question": "Q: If you had concert tickets to a bladee concert but you only had two tickets which Aiko character would you invite?",
+		"choices": ["Prixie", "Meepo", "Saitzu Zatsu", "Cell-y"],
+    "answers": ["1","2","3","4"],
+     "weights": {
+      "1": "Ronin",
+      "2": "Droid",
+      "3": "Human",
+      "4": "Human"}
+	},
+	{
+		"question": "Q: Who do you think Meepo listens to the most on Spotify?",
+		"choices": ["travis scott", "hatsune miku", "ariana grande", "paula Abdul"],
+    "answers": ["1","2","3","4"],
+     "weights": {
+      "1": "Ronin",
+      "2": "Droid",
+      "3": "Human",
+      "4": "Human"}
+	},
+	{
+		"question": "Q: If you could buy new shoes for Prixie what shoes would they be?",
+		"choices": ["air Forces", "nike Dunk Lows", "birken-stocks", "loafers"],
+    "answers": ["1","2","3","4"],
+     "weights": {
+      "1": "Ronin",
+      "2": "Droid",
+      "3": "Human",
+      "4": "Human"}
+	}
+]

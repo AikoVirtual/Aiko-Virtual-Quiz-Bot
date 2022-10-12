@@ -1,0 +1,26 @@
+{
+  "style": {
+    "primaryColor": "557AAB"
+  },
+  "store": {
+    "salesChannelId": "1023373824571473940"
+  },
+  "quiz": {
+    "quizChannelId": "1025129768087212143"
+  },
+  "quizCategory": {
+     "quizCategoryId": "1023371164321595494"
+  },
+  "roles": [
+    "Ronin",
+    "Droid",
+    "Human"
+  ],
+    "roleIds": [
+    "1025939625048555592",
+    "1025939638906519672",
+    "1025939649870434306"
+  ],
+  "quizTime": 120000,
+  "maxQuestions": 10
+}
