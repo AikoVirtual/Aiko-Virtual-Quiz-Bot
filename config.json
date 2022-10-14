@@ -11,7 +11,13 @@
   "quizCategory": {
      "quizCategoryId": "1023371164321595494"
   },
-  "roles": [
+  "role": {
+    "holder": "1022364465657815122",
+    "ronin": "1025939625048555592",
+    "droid": "1025939638906519672",
+    "human": "1025939649870434306"
+  },
+  "roleNames": [
     "Ronin",
     "Droid",
     "Human"

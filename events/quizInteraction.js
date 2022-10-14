@@ -11,9 +11,12 @@ module.exports = {
 
     if (interaction.isChatInputCommand()) return;
 
-    else if (interaction.isButton() && member.roles.cache.has("1022364465657815122") && !member.roles.cache.has(config["roleIds"][0]) && !member.roles.cache.has(config["roleIds"][1]) && !member.roles.cache.has(config["roleIds"][2])) {
+    //////////////////////////////////////////////////
+    // checks if user is a holder or had guild roles
+    //////////////////////////////////////////////////
+    else if (interaction.isButton() && member.roles.cache.has(config['role']['holder']) && !member.roles.cache.has(config['role']['ronin']) && !member.roles.cache.has(config['role']['droid']) && !member.roles.cache.has(config['role']['human'])) {
 
-      // && !member.roles.cache.has(config["roleIds"][0]) && !member.roles.cache.has(config["roleIds"][1]) && !member.roles.cache.has(config["roleIds"][2])) 
+
 
       if (message.guild.channels.cache.find(channel => channel.name.includes(`${user.id}`))) {
         const roleRequired = new EmbedBuilder()
@@ -34,6 +37,7 @@ module.exports = {
 
       const minutes = numFormat.convertMsToMinutesSeconds(config["quizTime"]);
 
+      // Leaving comment in just in case changes of needing quiz role
       // const quizRole = message.guild.roles.cache.get("1026248802568503449");
       // member.roles.remove(quizRole)
       try {
@@ -74,6 +78,7 @@ module.exports = {
             ephemeral: true
           });
 
+          // Leaving comment in just in case changes of needing parent category but most likely not because weird setting perms when creating channel
           // await channel.setParent('1028862575510831104');
 
           ///////////////////////////////////////
@@ -95,9 +100,9 @@ module.exports = {
           // guild role fetch
           ///////////////////////////////////////
           await message.guild.roles.fetch()
-          const roles = config['roles']
+          const roleNames = config['roleNames']
           let fetchedRoles = []
-          roles.forEach((roleName, i) => {
+          roleNames.forEach((roleName, i) => {
             fetchedRoles.push(message.guild.roles.cache.find(role => role.name === roleName))
           })
           let count = 0
@@ -138,28 +143,28 @@ module.exports = {
               case count === 0:
                 break;
               case roninVal > humanVal && roninVal > droidVal:
-                givenRole = roles[0]
+                givenRole = "Ronin"
                 member.roles.add(fetchedRoles[0]);
                 break;
               case droidVal > roninVal && droidVal > humanVal:
-                givenRole = roles[1]
+                givenRole = "Droid"
                 member.roles.add(fetchedRoles[1]);
                 break;
               case humanVal > roninVal && humanVal > droidVal:
-                givenRole = roles[2]
+                givenRole = "Human"
                 member.roles.add(fetchedRoles[2]);
                 break;
               case humanVal === roninVal || humanVal === droidVal || droidVal === roninVal || droidVal === roninVal === humanVal:
                 const chance = Math.floor(Math.random() * 3)
                 if (chance === 0) {
-                  givenRole = roles[0]
+                  givenRole = roleNames[0]
                   member.roles.add(fetchedRoles[0]);
                 } else if (chance === 1) {
-                  givenRole = roles[1]
+                  givenRole = roleNames[1]
                   member.roles.add(fetchedRoles[1]);
                 }
                 else {
-                  givenRole = roles[2]
+                  givenRole = roleNames[2]
                   member.roles.add(fetchedRoles[2]);
                 }
                 break;
@@ -190,6 +195,7 @@ module.exports = {
                 .setTitle(`${user.tag} You didn't finish the quiz in time! Please try again!`)
                 .setColor(config['style']['primaryColor'])
 
+              // Leaving comment in just in case changes of needing quiz role
               // member.roles.add(quizRole)
 
               await channel.send({
@@ -207,7 +213,6 @@ module.exports = {
           quizQuestions = quizQuestions.filter(item => {
             return quizQuestions[index] != item
           })
-          // quizList.newQuestion(quizQuestions, channel)
           ///////////////////////////////////////
           // error handling
           ///////////////////////////////////////
