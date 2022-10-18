@@ -1,109 +1,109 @@
 [
-        {
-		"question": "Q: You’re hosting a sleepover with Meepo, and you decided to watch anime! What will you guys choose?",
-		"choices": ["Chainsaw Man", "Great Pretender", "Komi-san Can’t Communicate", "Haikyuu!!"],
+  	{
+		"question": "Q: If Zatsu and Prixie are near to death, who you would save?",
+		"choices": ["Prixie", "Zatsu", "Silence", "Die trying to save both"],
     "answers": ["1","2","3","4"],
-    "weights": {
+     "weights": {
+      "1": "Droid",
+      "2": "Human",
+      "3": "Ronin",
+      "4": "Human"}
+	},
+  	{
+		"question": "Q: Carbosaurus are a dangerous species from the East Wind Desert. They are huge creatures, 30% smaller than a T-Rex in our world. Their hind legs have a natural adaptation to make them 'ski' in the sands of the desert, accelerating at high speeds! They also form traps around oases below the sand level. If by chance, you come across a Carbosaurus, what would you do?",
+		"choices": ["Runaway", "Fight", "Scream", "Call for help"],
+    "answers": ["1","2","3","4"],
+     "weights": {
+      "1": "Ronin",
+      "2": "Droid",
+      "3": "Human",
+      "4": "Droid"}
+	},
+  {
+		"question": "Q: You are in the Venomous Islands, you have 3 things that you think are edible in your bag. What do you eat?",
+		"choices": ["A thing that looks like a Strawberry", "A thing that looks like a Marshmallow", "A candy that you carried from your home", "Refuse to eat"],
+    "answers": ["1","2","3","4"],
+     "weights": {
+      "1": "Human",
+      "2": "Droid",
+      "3": "Ronin",
+      "4": "Ronin"}
+	},
+    {
+		"question": "Q: You are choosing a role of Ronin from the East Winds Region who would you choose?",
+		"choices": ["Collector: Explore and find resources to bring back to the Temple", "Scouter: The backline of missions that needs fighting", "Spy: Selected for stealth missions, and also to get information", "Fishermen: Selected for hunting missions"],
+    "answers": ["1","2","3","4"],
+     "weights": {
+      "1": "Ronin",
+      "2": "Droid",
+      "3": "Human",
+      "4": "Ronin"}
+	},
+  {
+		"question": "Q: What is your favorite shoes brand?",
+		"choices": ["Nike", "Adidas", "New Balance", "Mizuno"],
+    "answers": ["1","2","3","4"],
+     "weights": {
+      "1": "Human",
+      "2": "Human",
+      "3": "Droid",
+      "4": "Ronin"}
+	},
+    {
+		"question": "Q: Which group of games are your favorite?",
+		"choices": ["League of Legends, Battlefield, Perfect World", "Valorant, Ragnarok Online, DotA 2", "Counter Strike: GO, MapleStory, Animal Crossing", "Mario Kart, Call of Duty, Zelda: Breath of the Wild"],
+    "answers": ["1","2","3","4"],
+     "weights": {
       "1": "Ronin",
       "2": "Droid",
       "3": "Human",
       "4": "Human"}
 	},
-      {
-		"question": "Q: Look! A Meepo Candy & Sweets Shop has arrived in the city! You and Prixie will check it out, what do you think she’s gonna order?",
-		"choices": ["Mochi", "Donuts", "Daifuku", "Sanshoku Dango"],
+        {
+		"question": "Q: You’re hosting a sleepover with Meepo, and you decided to binge watch anime! What will you guys marathon?",
+		"choices": ["Shingeki no Kyojin, Yuri On Ice, Dragon Ball", "Jujutsu Kaisen, Hunter x Hunter, Naruto", "One Punch Man, Haikyuu, Chainsaw Man", "Ano Hana, Shigatsu wa Kimi No Uso, Angel Beats!"],
     "answers": ["1","2","3","4"],
     "weights": {
-      "1": "Ronin",
-      "2": "Droid",
-      "3": "Human",
+      "1": "Droid",
+      "2": "Ronin",
+      "3": "Droid",
+      "4": "Ronin"}
+	},
+      {
+		"question": "Q: You're ordering from the Meepo Delivery App! What kind of food do you order?",
+		"choices": ["Fast food", "Italian", "Japanese", "Arabic"],
+    "answers": ["1","2","3","4"],
+    "weights": {
+      "1": "Droid",
+      "2": "Human",
+      "3": "Ronin",
       "4": "Human"}
 	},
     {
-		"question": "Q: You’re having some art classes in Aiko University, who’s your favorite teacher?",
-		"choices": ["Garrid as Art Teacher", "Meepo as Math Teacher", "Kyo as Fashion Teacher", "Matarelli as Geography Teacher"],
+		"question": "Q: You’re taking classes in Aiko University, who is your favorite teacher?",
+		"choices": ["Cell-y the Language Professor", "Meepo the Math Professor", "Prixie the Chemistry Professor", "I hate studying!"],
     "answers": ["1","2","3","4"],
     "weights": {
-      "1": "Ronin",
+      "1": "Human",
       "2": "Droid",
-      "3": "Human",
-      "4": "Human"}
+      "3": "Droid",
+      "4": "Ronin"}
 	},
   {
-		"question": "Q: You’re having a date with Prixie but suddenly it starts raining! What would you do?",
-		"choices": ["Use your jacket and protect her", "Spend 150 Meepo Coins to buy a nice umbrella in a nearby shop", "You put Prixie on your shoulders and run away to a place with no rain", "Steal a nearby car to seek shelter from rain"],
+		"question": "Q: If you could tame a creature from the East Wind Desert, which creature would you tame?",
+		"choices": ["Drominidis: Friendly creature that helps with carrying cargo", "Sandshark: Cartilaginous desert worm that preys on Nomads", "Carbosaurus: Giant desert surface predator that skis the desert dunes", "Neckosaurus: Fast reptilian that has horns reminiscing of cat ears"],
     "answers": ["1","2","3","4"],
     "weights": {
       "1": "Ronin",
-      "2": "Droid",
+      "2": "Human",
       "3": "Human",
-      "4": "Human"}
+      "4": "Droid"}
 	},
   {
 		"question": "Q: What do you think Meepo does in his free time?",
 		"choices": ["Clothes Shopping", "Nature Watching", "Watches Movies", "Plays Video Games"],
     "answers": ["1","2","3","4"],
     "weights": {
-      "1": "Ronin",
-      "2": "Droid",
-      "3": "Human",
-      "4": "Human"}
-	},
-  {
-		"question": "Q: What do you think is Meepo's favorite food?",
-		"choices": ["Lasagna", "Noodles", "Subway", "Pizza"],
-    "answers": ["1","2","3","4"],
-    "weights": {
-      "1": "Ronin",
-      "2": "Droid",
-      "3": "Human",
-      "4": "Human"}
-	},
-  {
-		"question": "Q: What do you think is Meepo's favorite sock color?",
-		"choices": ["Red", "Brown", "Orange", "Pink"],
-    "answers": ["1","2","3","4"],
-    "weights": {
-      "1": "Ronin",
-      "2": "Droid",
-      "3": "Human",
-      "4": "Human"}
-	},
-	{
-		"question": "Q: If Meepo was hanging from a cliff what would you do?",
-		"choices": ["Save Meepo", "Watch Meepo Fall", "Call for Help", "Meepo is fine"],
-    "answers": ["1","2","3","4"],
-    "weights": {
-      "1": "Ronin",
-      "2": "Droid",
-      "3": "Human",
-      "4": "Human"}
-	},
-	{
-		"question": "Q: If you had concert tickets to a bladee concert but you only had two tickets which Aiko character would you invite?",
-		"choices": ["Prixie", "Meepo", "Saitzu Zatsu", "Cell-y"],
-    "answers": ["1","2","3","4"],
-     "weights": {
-      "1": "Ronin",
-      "2": "Droid",
-      "3": "Human",
-      "4": "Human"}
-	},
-	{
-		"question": "Q: Who do you think Meepo listens to the most on Spotify?",
-		"choices": ["travis scott", "hatsune miku", "ariana grande", "paula Abdul"],
-    "answers": ["1","2","3","4"],
-     "weights": {
-      "1": "Ronin",
-      "2": "Droid",
-      "3": "Human",
-      "4": "Human"}
-	},
-	{
-		"question": "Q: If you could buy new shoes for Prixie what shoes would they be?",
-		"choices": ["air Forces", "nike Dunk Lows", "birken-stocks", "loafers"],
-    "answers": ["1","2","3","4"],
-     "weights": {
       "1": "Ronin",
       "2": "Droid",
       "3": "Human",

@@ -11,8 +11,7 @@ module.exports = {
     console.log(`૮ ˶ᵔ ᵕ ᵔ˶ ა  ${client.user.tag} ready to take quizzes!`);
 
     // send quizwebhook (comment out if not needed)
-    const channel = client.channels.cache.get(config['quiz']['quizChannelId']);
-
-    quiz.sendQuizWebhook(channel)
+    // const channel = client.channels.cache.get(config['quiz']['quizChannelId']);
+    // quiz.sendQuizWebhook(channel)
   },
 };

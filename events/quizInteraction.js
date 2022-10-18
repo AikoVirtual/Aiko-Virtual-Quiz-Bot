@@ -85,7 +85,7 @@ module.exports = {
           // send a quiz message in new channel
           ///////////////////////////////////////
           let quizQuestions = quiz
-          const item = quizQuestions[Math.floor(Math.random() * quiz.length)];
+          let item = quizQuestions[Math.floor(Math.random() * quiz.length)];
 
           ///////////////////////////////////////
           // collector creation
@@ -100,71 +100,89 @@ module.exports = {
           // guild role fetch
           ///////////////////////////////////////
           await message.guild.roles.fetch()
-          const roleNames = config['roleNames']
+          const roleNames = config['roleIds']
           let fetchedRoles = []
           roleNames.forEach((roleName, i) => {
-            fetchedRoles.push(message.guild.roles.cache.find(role => role.name === roleName))
+            fetchedRoles.push(message.guild.roles.cache.find(role => role.id === roleName))
           })
           let count = 0
           const guildWeight = new Map([['Ronin', 0], ['Droid', 0], ['Human', 0]]);
 
-          collector.on('collect', async m => {
+          let index = Math.floor(Math.random() * quizQuestions.length)
+          await quizList.newQuestion(quizQuestions, index, channel)
+          console.log(quizQuestions[index].choices)
+          console.log(quizQuestions[index].weights)
+
+          collector.on('collect', async (m) => {
+            console.log(index)
             switch (true) {
-              case item.weights[m] == "Ronin":
+              case quizQuestions[index].weights[m] == "Ronin":
                 guildWeight.set('Ronin', guildWeight.get('Ronin') + 1 || 1);
                 break;
-              case item.weights[m] == "Droid":
+              case quizQuestions[index].weights[m] == "Droid":
                 guildWeight.set('Droid', guildWeight.get('Droid') + 1 || 1);
                 break;
-              case item.weights[m] == "Human":
+              case quizQuestions[index].weights[m] == "Human":
                 guildWeight.set('Human', guildWeight.get('Human') + 1 || 1);
                 break;
             }
             count += 1
+            console.log(guildWeight)
 
             if (count < config['maxQuestions']) {
-              let index = Math.floor(Math.random() * quizQuestions.length)
-              await quizList.newQuestion(quizQuestions, index, channel)
               quizQuestions = quizQuestions.filter(item => {
                 return quizQuestions[index] != item
               })
+              index = Math.floor(Math.random() * quizQuestions.length)
+              console.log(quizQuestions[index].choices)
+              console.log(quizQuestions[index].weights)
+              await quizList.newQuestion(quizQuestions, index, channel)
             }
           });
 
           collector.on('end', async collected => {
-            const roninVal = guildWeight.get("Ronin")
-            const droidVal = guildWeight.get("Droid")
-            const humanVal = guildWeight.get("Human")
             ///////////////////////////////////////
             // give member guild role based on quiz score
             ///////////////////////////////////////
             let givenRole = null
+            let channelId = 1
+
+            const roninVal = guildWeight.get("Ronin")
+            const droidVal = guildWeight.get("Droid")
+            const humanVal = guildWeight.get("Human")
+
             switch (true) {
               case count === 0:
                 break;
               case roninVal > humanVal && roninVal > droidVal:
                 givenRole = "Ronin"
+                channelId = config['guildChannel'][0]
                 member.roles.add(fetchedRoles[0]);
                 break;
               case droidVal > roninVal && droidVal > humanVal:
                 givenRole = "Droid"
+                channelId = config['guildChannel'][1]
                 member.roles.add(fetchedRoles[1]);
                 break;
               case humanVal > roninVal && humanVal > droidVal:
                 givenRole = "Human"
+                channelId = config['guildChannel'][2]
                 member.roles.add(fetchedRoles[2]);
                 break;
               case humanVal === roninVal || humanVal === droidVal || droidVal === roninVal || droidVal === roninVal === humanVal:
                 const chance = Math.floor(Math.random() * 3)
                 if (chance === 0) {
-                  givenRole = roleNames[0]
+                  givenRole = config['roleNames'][0]
+                  channelId = config['guildChannel'][0]
                   member.roles.add(fetchedRoles[0]);
                 } else if (chance === 1) {
-                  givenRole = roleNames[1]
+                  givenRole = config['roleNames'][1]
+                  channelId = config['guildChannel'][1]
                   member.roles.add(fetchedRoles[1]);
                 }
                 else {
-                  givenRole = roleNames[2]
+                  givenRole = config['roleNames'][2]
+                  channelId = config['guildChannel'][2]
                   member.roles.add(fetchedRoles[2]);
                 }
                 break;
@@ -176,7 +194,7 @@ module.exports = {
               console.log(`${user.tag} given the ${givenRole} role with a quiz score of ${[...guildWeight.entries()]}`)
 
               const ending = new EmbedBuilder()
-                .setTitle(`${user.tag} Thank you for filling out our quiz! It seems you're best fitted with the ${givenRole}s! This channel will delete now!`)
+                .setDescription(`${user.tag} The Ancient Calling chose you as a ${givenRole}! Check out the <#${channelId}>! This channel will delete now!`)
                 .setColor(config['style']['primaryColor'])
 
               await channel.send({
@@ -208,11 +226,16 @@ module.exports = {
               }, "10000")
             }
           });
-          let index = Math.floor(Math.random() * quizQuestions.length)
-          quizList.newQuestion(quizQuestions, index, channel)
-          quizQuestions = quizQuestions.filter(item => {
-            return quizQuestions[index] != item
-          })
+
+          // let index = Math.floor(Math.random() * quizQuestions.length)
+          // await quizList.newQuestion(quizQuestions, index, channel)
+          // console.log(quizQuestions[index].choices)
+          // console.log(quizQuestions[index].weights)
+
+          // quizQuestions = quizQuestions.filter(item => {
+          //   return quizQuestions[index] != item
+          // })
+
           ///////////////////////////////////////
           // error handling
           ///////////////////////////////////////
