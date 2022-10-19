@@ -110,11 +110,11 @@ module.exports = {
 
           let index = Math.floor(Math.random() * quizQuestions.length)
           await quizList.newQuestion(quizQuestions, index, channel)
-          console.log(quizQuestions[index].choices)
-          console.log(quizQuestions[index].weights)
+          // console.log(quizQuestions[index].choices)
+          // console.log(quizQuestions[index].weights)
 
           collector.on('collect', async (m) => {
-            console.log(index)
+            // console.log(index)
             switch (true) {
               case quizQuestions[index].weights[m] == "Ronin":
                 guildWeight.set('Ronin', guildWeight.get('Ronin') + 1 || 1);
@@ -127,15 +127,15 @@ module.exports = {
                 break;
             }
             count += 1
-            console.log(guildWeight)
+            // console.log(guildWeight)
 
             if (count < config['maxQuestions']) {
               quizQuestions = quizQuestions.filter(item => {
                 return quizQuestions[index] != item
               })
               index = Math.floor(Math.random() * quizQuestions.length)
-              console.log(quizQuestions[index].choices)
-              console.log(quizQuestions[index].weights)
+              // console.log(quizQuestions[index].choices)
+              // console.log(quizQuestions[index].weights)
               await quizList.newQuestion(quizQuestions, index, channel)
             }
           });
@@ -226,15 +226,6 @@ module.exports = {
               }, "10000")
             }
           });
-
-          // let index = Math.floor(Math.random() * quizQuestions.length)
-          // await quizList.newQuestion(quizQuestions, index, channel)
-          // console.log(quizQuestions[index].choices)
-          // console.log(quizQuestions[index].weights)
-
-          // quizQuestions = quizQuestions.filter(item => {
-          //   return quizQuestions[index] != item
-          // })
 
           ///////////////////////////////////////
           // error handling
