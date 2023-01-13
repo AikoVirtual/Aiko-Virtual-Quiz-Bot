@@ -3,51 +3,56 @@
 		"question": "Q: If Zatsu and Prixie are near to death, who you would save?",
 		"choices": ["Prixie", "Zatsu", "Silence", "Die trying to save both"],
     "answers": ["1","2","3","4"],
-     "weights": {
+    "weights": {
       "1": "Droid",
       "2": "Human",
       "3": "Ronin",
-      "4": "Human"}
+      "4": "Human"},
+    "image": null
 	},
   	{
 		"question": "Q: Carbosaurus are a dangerous species from the East Wind Desert. They are huge creatures, 30% smaller than a T-Rex in our world. Their hind legs have a natural adaptation to make them 'ski' in the sands of the desert, accelerating at high speeds! They also form traps around oases below the sand level. If by chance, you come across a Carbosaurus, what would you do?",
 		"choices": ["Runaway", "Fight", "Scream", "Call for help"],
     "answers": ["1","2","3","4"],
-     "weights": {
+    "weights": {
       "1": "Ronin",
       "2": "Droid",
       "3": "Human",
-      "4": "Droid"}
+      "4": "Droid"},
+    "image": "https://i.imgur.com/HzaPRJs.png"
 	},
   {
 		"question": "Q: You are in the Venomous Islands, you have 3 things that you think are edible in your bag. What do you eat?",
 		"choices": ["A thing that looks like a Strawberry", "A thing that looks like a Marshmallow", "A candy that you carried from your home", "Refuse to eat"],
     "answers": ["1","2","3","4"],
-     "weights": {
+    "weights": {
       "1": "Human",
       "2": "Droid",
       "3": "Ronin",
-      "4": "Ronin"}
+      "4": "Ronin"},
+    "image": "https://i.imgur.com/wCuAg4S.png"
 	},
     {
 		"question": "Q: You are choosing a role of Ronin from the East Winds Region who would you choose?",
 		"choices": ["Collector: Explore and find resources to bring back to the Temple", "Scouter: The backline of missions that needs fighting", "Spy: Selected for stealth missions, and also to get information", "Fishermen: Selected for hunting missions"],
     "answers": ["1","2","3","4"],
-     "weights": {
+    "weights": {
       "1": "Ronin",
       "2": "Droid",
       "3": "Human",
-      "4": "Ronin"}
+      "4": "Ronin"},
+    "image": null
 	},
   {
 		"question": "Q: What is your favorite shoes brand?",
 		"choices": ["Nike", "Adidas", "New Balance", "Mizuno"],
     "answers": ["1","2","3","4"],
-     "weights": {
+    "weights": {
       "1": "Human",
       "2": "Human",
       "3": "Droid",
-      "4": "Ronin"}
+      "4": "Ronin"},
+    "image": null
 	},
     {
 		"question": "Q: Which group of games are your favorite?",
@@ -57,7 +62,8 @@
       "1": "Ronin",
       "2": "Droid",
       "3": "Human",
-      "4": "Human"}
+      "4": "Human"},
+    "image": null
 	},
         {
 		"question": "Q: You’re hosting a sleepover with Meepo, and you decided to binge watch anime! What will you guys marathon?",
@@ -67,7 +73,8 @@
       "1": "Droid",
       "2": "Ronin",
       "3": "Droid",
-      "4": "Ronin"}
+      "4": "Ronin"},
+    "image": null
 	},
       {
 		"question": "Q: You're ordering from the Meepo Delivery App! What kind of food do you order?",
@@ -77,7 +84,8 @@
       "1": "Droid",
       "2": "Human",
       "3": "Ronin",
-      "4": "Human"}
+      "4": "Human"},
+    "image": null
 	},
     {
 		"question": "Q: You’re taking classes in Aiko University, who is your favorite teacher?",
@@ -87,7 +95,8 @@
       "1": "Human",
       "2": "Droid",
       "3": "Droid",
-      "4": "Ronin"}
+      "4": "Ronin"},
+    "image": null
 	},
   {
 		"question": "Q: If you could tame a creature from the East Wind Desert, which creature would you tame?",
@@ -97,7 +106,8 @@
       "1": "Ronin",
       "2": "Human",
       "3": "Human",
-      "4": "Droid"}
+      "4": "Droid"},
+    "image": "https://i.imgur.com/hVRBQ5w.png"
 	},
   {
 		"question": "Q: What do you think Meepo does in his free time?",
@@ -107,6 +117,7 @@
       "1": "Ronin",
       "2": "Droid",
       "3": "Human",
-      "4": "Human"}
+      "4": "Human"},
+    "image": null
 	}
 ]

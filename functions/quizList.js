@@ -5,7 +5,7 @@ const config = require('../config.json');
 const newQuestion = async (quizQuestions, index, channel) => {
   let question = quizQuestions[index]
 
-  const questionEmbed = new EmbedBuilder()
+  let questionEmbed = new EmbedBuilder()
     .setTitle('Please answer with 1, 2, 3 or 4 as your response!')
     .setDescription(question.question)
     .addFields(
@@ -15,6 +15,10 @@ const newQuestion = async (quizQuestions, index, channel) => {
       { name: '4.', value: question.choices[3], inline: false },
     )
     .setColor(config['style']['primaryColor'])
+
+  if (question.image !== null) {
+    questionEmbed.setImage(question.image);
+  }
 
   await channel.send({
     embeds: [questionEmbed],
